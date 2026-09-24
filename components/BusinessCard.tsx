@@ -15,12 +15,12 @@ const GOOGLE_REVIEW_URLS: Record<number, string> = {
 
 const LINKS = {
   instagram: 'https://www.instagram.com/faincy_jewellery',
-  whatsapp: 'https://wa.me/918850995528?text=Hi%20Faincy!%20I%27m%20interested%20in%20your%20silver%20articles.',
+  whatsapp: 'https://wa.me/919079311530?text=Hi%20Faincy!%20I%27m%20interested%20in%20your%20silver%20articles.',
   facebook: 'https://www.facebook.com/share/1BYVJiT7YG/',
   website: 'https://faincy.co.in',
-  pinterest: 'https://pinterest.com/faincy_jewellery',
-  mapsStore1: 'https://maps.google.com/?q=Faincy+Jewellery+Store+125+Johri+Bazar+Biseswarji+Jaipur',
-  mapsStore2: 'https://maps.google.com/?q=Faincy+Jewellery+Store+Jai+Jawan+Colony+Adinath+Nagar+Jaipur',
+  pinterest: 'https://pin.it/63KBD7Vjj',
+  mapsStore1: 'https://www.google.com/maps/search/?api=1&query=Faincy&query_place_id=ChIJKXwKvq22bTkRlWbdYs3Ko1Q',
+  mapsStore2: 'https://www.google.com/maps/search/?api=1&query=Faincy&query_place_id=ChIJEUwP28a1bTkRfXLnD4Q9sZ8',
 }
 
 const STORAGE_KEY = 'faincy_bc_used_v1'
@@ -29,7 +29,7 @@ const VCARD = `BEGIN:VCARD
 VERSION:3.0
 FN:Faincy Silver
 ORG:Faincy Silver Articles
-TEL;TYPE=CELL:+918850995528
+TEL;TYPE=CELL:+919079311530
 URL:https://faincy.co.in
 ADR;TYPE=WORK:;;125 Johri Bazar;Jaipur;Rajasthan;302003;India
 NOTE:Est. 1939 · Pure 92.5 Hallmarked Silver · Handcrafted in Jaipur
@@ -164,7 +164,7 @@ function ReviewSheet({
                 background: activeStore === n ? 'rgba(201,169,110,0.08)' : 'transparent',
               }}
             >
-              {n === 1 ? 'Johari Bazaar' : 'Showroom'}
+              {n === 1 ? 'Showroom' : 'Designer Studio'}
             </button>
           ))}
         </div>
@@ -373,12 +373,12 @@ function BusinessCardInner({ groups }: { groups: Group[] }) {
       <section className="px-4 mb-6">
         <h2 className="text-xs tracking-[0.15em] uppercase mb-3" style={{ color: 'var(--muted)' }}>Contact</h2>
         <div className="grid grid-cols-2 gap-3">
-          <a href="tel:+918850995528"
+          <a href="tel:+919079311530"
              className="flex flex-col gap-1 p-4 rounded-xl transition-all active:scale-95"
              style={{ background: 'var(--bg2)', border: '1px solid var(--border-gold)' }}>
             <span className="text-xl">📞</span>
             <span className="text-sm font-medium" style={{ color: 'var(--cream)' }}>Call Us</span>
-            <span className="text-xs" style={{ color: 'var(--gold)' }}>+91 88509 95528</span>
+            <span className="text-xs" style={{ color: 'var(--gold)' }}>+91 90793 11530</span>
           </a>
           <a href={LINKS.whatsapp} target="_blank" rel="noopener noreferrer"
              className="flex flex-col gap-1 p-4 rounded-xl transition-all active:scale-95"
@@ -397,13 +397,13 @@ function BusinessCardInner({ groups }: { groups: Group[] }) {
           {[
             {
               n: 1,
-              name: 'Johari Bazaar',
+              name: 'Showroom',
               addr: '125, Johri Bazar, Biseswarji, Jaipur 302003',
               href: LINKS.mapsStore1,
             },
             {
               n: 2,
-              name: 'Showroom',
+              name: 'Designer Studio',
               addr: 'Jai Jawan Colony, Adinath Nagar, Jaipur 302018',
               href: LINKS.mapsStore2,
             },
@@ -432,8 +432,8 @@ function BusinessCardInner({ groups }: { groups: Group[] }) {
         <h2 className="text-xs tracking-[0.15em] uppercase mb-3" style={{ color: 'var(--muted)' }}>Hours</h2>
         <div className="grid grid-cols-2 gap-3">
           {[
-            { name: 'Johari Bazaar', hours: '10am – 7pm', days: 'Mon – Sat' },
-            { name: 'Showroom',      hours: '10am – 7pm', days: 'Mon – Sat' },
+            { name: 'Showroom',        hours: '12pm – 8pm', days: 'Mon – Sat' },
+            { name: 'Designer Studio', hours: '12pm – 8pm', days: 'Mon – Sat' },
           ].map(h => (
             <div key={h.name} className="p-4 rounded-xl"
                  style={{ background: 'var(--bg2)', border: '1px solid var(--border)' }}>
@@ -458,7 +458,7 @@ function BusinessCardInner({ groups }: { groups: Group[] }) {
                style={{ background: 'var(--bg2)', border: '1px solid var(--border-gold)', minWidth: 96, width: 96, height: 160, position: 'relative', display: 'block' }}>
               {group.coverImageUrl ? (
                 <>
-                  <Image src={group.coverImageUrl} alt={group.name} fill style={{ objectFit: 'cover' }} />
+                  <Image src={group.coverImageUrl} alt={group.name} fill style={{ objectFit: 'cover' }} unoptimized />
                   <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.4)', zIndex: 1 }} />
                   <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '0.5rem', zIndex: 2, textAlign: 'center' }}>
                     <span className="text-[11px] font-medium leading-tight" style={{ color: '#fff' }}>{group.name}</span>
