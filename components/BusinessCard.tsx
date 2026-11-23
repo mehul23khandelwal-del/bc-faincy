@@ -17,7 +17,7 @@ const LINKS = {
   instagram: 'https://www.instagram.com/faincy_jewellery',
   whatsapp: 'https://wa.me/919079311530?text=Hi%20Faincy!%20I%27m%20interested%20in%20your%20silver%20articles.',
   facebook: 'https://www.facebook.com/share/1BYVJiT7YG/',
-  website: 'https://faincy.co.in',
+  website: 'https://www.faincy.co.in',
   pinterest: 'https://pin.it/63KBD7Vjj',
   mapsStore1: 'https://www.google.com/maps/search/?api=1&query=Faincy&query_place_id=ChIJKXwKvq22bTkRlWbdYs3Ko1Q',
   mapsStore2: 'https://www.google.com/maps/search/?api=1&query=Faincy&query_place_id=ChIJEUwP28a1bTkRfXLnD4Q9sZ8',
@@ -30,7 +30,7 @@ VERSION:3.0
 FN:Faincy Silver
 ORG:Faincy Silver Articles
 TEL;TYPE=CELL:+919079311530
-URL:https://faincy.co.in
+URL:https://www.faincy.co.in
 ADR;TYPE=WORK:;;125 Johri Bazar;Jaipur;Rajasthan;302003;India
 NOTE:Est. 1939 · Pure 92.5 Hallmarked Silver · Handcrafted in Jaipur
 END:VCARD`
@@ -452,7 +452,7 @@ function BusinessCardInner({ groups }: { groups: Group[] }) {
              style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' } as React.CSSProperties}>
           {groups.map(group => (
             <a key={group.slug}
-               href={`https://faincy.co.in/shop?group=${group.slug}`}
+               href={`https://www.faincy.co.in/shop?group=${group.slug}`}
                target="_blank" rel="noopener noreferrer"
                className="shrink-0 rounded-xl overflow-hidden transition-all active:scale-95"
                style={{ background: 'var(--bg2)', border: '1px solid var(--border-gold)', minWidth: 96, width: 96, height: 160, position: 'relative', display: 'block' }}>
@@ -474,7 +474,7 @@ function BusinessCardInner({ groups }: { groups: Group[] }) {
           ))}
         </div>
         <div className="px-4 pt-3">
-          <a href="https://faincy.co.in/shop" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.faincy.co.in/shop" target="_blank" rel="noopener noreferrer"
              className="w-full flex items-center justify-center py-3 rounded-xl text-sm font-medium transition-all active:scale-[0.99]"
              style={{ border: '1px solid var(--border-gold)', color: 'var(--gold)', background: 'transparent' }}>
             View Full Catalogue →
